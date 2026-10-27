@@ -1,0 +1,59 @@
+{
+  "luccet": "2.0.0",
+  "format": 1,
+  "notes": [
+    {
+      "url": "index.html",
+      "title": "Smoke: a folder's index",
+      "date": "2026-01-01",
+      "headings": [],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 1,
+          "from": null
+        },
+        {
+          "url": "post.html",
+          "fragment": null,
+          "line": 1,
+          "from": null
+        }
+      ]
+    },
+    {
+      "url": "post.html",
+      "title": "Smoke: a post",
+      "date": "2026-01-02",
+      "headings": [
+        {
+          "depth": 1,
+          "id": "post",
+          "text": "A post"
+        }
+      ],
+      "links": []
+    },
+    {
+      "url": "plain.html",
+      "title": "Smoke: a page without its extension",
+      "date": "2026-01-03",
+      "headings": [],
+      "links": [
+        {
+          "url": "plain.html",
+          "fragment": null,
+          "line": 1,
+          "from": null
+        },
+        {
+          "url": "post.html",
+          "fragment": null,
+          "line": 1,
+          "from": null
+        }
+      ]
+    }
+  ]
+}

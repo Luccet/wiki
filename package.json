@@ -1,0 +1,15 @@
+{
+  "name": "@luccet/wiki",
+  "private": true,
+  "description": "A wiki for Luccet notes: a list of a folder's notes, a search box over them and a glossary of the terms they define, from what luccet index writes.",
+  "license": "MIT",
+  "repository": "github:Luccet/wiki",
+  "scripts": {
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "node test/notes/node.js && node test/search/node.js && node test/glossary/node.js",
+    "test:browser": "node test/notes/browser.js && node test/search/browser.js && node test/glossary/browser.js"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}
