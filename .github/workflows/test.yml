@@ -1,0 +1,52 @@
+# The add-on's tests, against the engine's main branch and its latest
+# release: every push, every pull request, and every Monday, since the
+# engine moves on its own. The same file in every add-on repository
+# (github.com/Luccet/<name>).
+name: test
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: node and browsers, against luccet ${{ matrix.engine }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [main, v2.0.0] # the latest release: move it on with each engine release
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: Luccet/luccet
+          ref: ${{ matrix.engine }}
+          path: .luccet
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - uses: actions/cache@v6
+        with:
+          path: node_modules/.cache/luccet-smoke
+          key: packages-${{ hashFiles('*.js', 'tools/*.js') }}
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package.json') }}
+      - run: npx playwright install --with-deps chromium firefox
+      - run: npm test
+        env:
+          LUCCET_ROOT: .luccet
