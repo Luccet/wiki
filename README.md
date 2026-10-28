@@ -19,7 +19,7 @@ notes/
 ```
 
 ```html
-<!doctype html><meta charset="utf-8"><script src="luccet.js" data-use="https://cdn.jsdelivr.net/gh/Luccet/wiki@1/notes.js https://cdn.jsdelivr.net/gh/Luccet/wiki@1/search.js"></script>
+<!doctype html><meta charset="utf-8"><script src="luccet.js" data-use="https://cdn.luccet.dev/wiki/v1/notes.js https://cdn.luccet.dev/wiki/v1/search.js"></script>
 
 # My notes
 
@@ -38,15 +38,15 @@ It needs Luccet 2, the [add-on API](https://luccet.dev/docs/addon-api.html) 2 (`
 <!doctype html><meta charset="utf-8"><script src="luccet.js"></script>
 
 :::use
-https://cdn.jsdelivr.net/gh/Luccet/wiki@1/notes.js
+https://cdn.luccet.dev/wiki/v1/notes.js
 :::
 ```
 
-- **From jsDelivr,** `https://cdn.jsdelivr.net/gh/Luccet/wiki@1/` followed by `notes.js`, `search.js` or `glossary.js`. `@1` is the newest 1.x release of the wiki.
+- **From cdn.luccet.dev,** `https://cdn.luccet.dev/wiki/v1/` followed by `notes.js`, `search.js` or `glossary.js`. `v1/` is the newest 1.x release of the wiki, checked for a newer one every hour; a release's own folder, such as `v1.0.0/`, never changes, and browsers keep it a year. jsDelivr serves the same tags: `https://cdn.jsdelivr.net/gh/Luccet/wiki@1/notes.js`.
 - **A copy of your own:** put the files beside your notes and list them by their paths, `data-use="notes.js search.js"`.
   - `luccet check` and `luccet build` run a copy of your own, so they know `::notes`, `::search`, `::glossary` and `:term`.
-  - They do not load one from jsDelivr ([`addon.remote`](https://luccet.dev/docs/schema.html#addon-failed)), so to them those are names with no schema.
-  - For the glossary that matters: with it from jsDelivr, a missing glossary page is not reported, and a page `luccet build` writes has no link for a use. Use a copy of `glossary.js` with the command line.
+  - They do not load one from a URL ([`addon.remote`](https://luccet.dev/docs/schema.html#addon-failed)), so to them those are names with no schema.
+  - For the glossary that matters: with it from the CDN, a missing glossary page is not reported, and a page `luccet build` writes has no link for a use. Use a copy of `glossary.js` with the command line.
 - **The files it reads:** run `luccet index` in the folder of the notes; it writes `notes.json`, `search.json` and `glossary.json` there ([what is written](https://luccet.dev/docs/tools.html#index-files)).
 - **The pages need to be served over HTTP:** browsers refuse the fetches from a `file:` URL.
 
@@ -153,7 +153,7 @@ Its words come from [`window.LUCCET.strings`](https://luccet.dev/docs/api.html#s
 ```html
 <!doctype html><meta charset="utf-8"><script>
 window.LUCCET = { lang: 'de', strings: { searchPlaceholder: 'Notizen durchsuchen', noResults: 'Keine Treffer', results: '{n} Treffer|{n} Treffer' } };
-</script><script src="luccet.js" data-use="https://cdn.jsdelivr.net/gh/Luccet/wiki@1/search.js"></script>
+</script><script src="luccet.js" data-use="https://cdn.luccet.dev/wiki/v1/search.js"></script>
 ```
 
 ### Privacy

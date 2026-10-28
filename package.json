@@ -4,6 +4,11 @@
   "description": "A wiki for Luccet notes: a list of a folder's notes, a search box over them and a glossary of the terms they define, from what luccet index writes.",
   "license": "MIT",
   "repository": "github:Luccet/wiki",
+  "files": [
+    "notes.js",
+    "search.js",
+    "glossary.js"
+  ],
   "scripts": {
     "test": "npm run test:node && npm run test:browser",
     "test:node": "node test/notes/node.js && node test/search/node.js && node test/glossary/node.js",

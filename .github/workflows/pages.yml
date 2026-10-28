@@ -1,0 +1,43 @@
+# The releases on GitHub Pages, at luccet.github.io/<name>/, which
+# cdn.luccet.dev serves as cdn.luccet.dev/<name>/: each vX.Y.Z tag in a
+# folder of its own, and vX.Y/ and vX/ for the newest of a series and of a
+# major (tools/site.js). Runs on each tag pushed, and by hand from the
+# Actions tab. The github-pages environment allows main and v* tags. The
+# same file in every add-on repository and in Luccet/themes.
+name: pages
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  pages:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # every tag: each release is served from its own
+          fetch-tags: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: node tools/site.js
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v5
