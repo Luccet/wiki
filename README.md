@@ -42,7 +42,7 @@ https://cdn.luccet.dev/wiki/v1/notes.js
 :::
 ```
 
-- **From cdn.luccet.dev,** `https://cdn.luccet.dev/wiki/v1/` followed by `notes.js`, `search.js` or `glossary.js`. `v1/` is the newest 1.x release of the wiki, checked for a newer one every hour; a release's own folder, such as `v1.0.0/`, never changes, and browsers keep it a year. jsDelivr serves the same tags: `https://cdn.jsdelivr.net/gh/Luccet/wiki@1/notes.js`.
+- **From cdn.luccet.dev,** `https://cdn.luccet.dev/wiki/v1/` followed by `notes.js`, `search.js` or `glossary.js`. `v1/` is the newest 1.x release of the wiki, checked for a newer one every hour; a release's own folder, such as `v1.0.0/`, never changes, and browsers keep it a year.
 - **A copy of your own:** put the files beside your notes and list them by their paths, `data-use="notes.js search.js"`.
   - `luccet check` and `luccet build` run a copy of your own, so they know `::notes`, `::search`, `::glossary` and `:term`.
   - They do not load one from a URL ([`addon.remote`](https://luccet.dev/docs/schema.html#addon-failed)), so to them those are names with no schema.
