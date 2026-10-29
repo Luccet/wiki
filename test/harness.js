@@ -30,6 +30,8 @@
 //   /luccet.js, /luccet.css        the engine's
 //   /csp/…, /csp-nonce/…           the same paths under a strict policy that
 //                                  allows https://cdn.jsdelivr.net (CSP, NONCE)
+//   /csp-wasm/…                    under the nonce policy that also allows
+//                                  WebAssembly ('wasm-unsafe-eval')
 //   /gen/PATH                      opts.generated[PATH]() -> [type, body]
 //   what opts.route(url) names     a file, for paths of the tests' own
 //   anything else                  the repository's files; a folder's address
@@ -141,13 +143,14 @@ const TYPES = {
 const NONCE = 'luccet-addon-nonce';
 const CSP = "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:";
 const CSP_NONCE = CSP.replace(/(script-src|style-src) 'self'/g, `$1 'self' 'nonce-${NONCE}'`);
+const CSP_WASM = CSP_NONCE.replace("script-src 'self'", "script-src 'self' 'wasm-unsafe-eval'");
 const PNG_1PX = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=', 'base64');
 
 function siteHandler(opts) {
   return (req, res) => {
     let url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
     const headers = {};
-    for (const [prefix, policy] of [['/csp/', CSP], ['/csp-nonce/', CSP_NONCE]]) {
+    for (const [prefix, policy] of [['/csp/', CSP], ['/csp-nonce/', CSP_NONCE], ['/csp-wasm/', CSP_WASM]]) {
       if (url.startsWith(prefix)) (url = url.slice(prefix.length - 1)), (headers['Content-Security-Policy'] = policy);
     }
     if (url.startsWith('/gen/') && opts.generated && opts.generated[url.slice(5)]) {
@@ -272,7 +275,7 @@ async function runTest(browser, origin, t, opts) {
     });
     page.on('pageerror', (e) => consoleErrors.push(String(e)));
     await page.addInitScript(() => {
-      window.__csp = []; // the policy violations, for a test under /csp/ or /csp-nonce/
+      window.__csp = []; // the policy violations, for a test under /csp/, /csp-nonce/ or /csp-wasm/
       document.addEventListener('securitypolicyviolation', (e) => window.__csp.push(`${e.violatedDirective} ${e.blockedURI}`));
     });
     if (t.init) await page.addInitScript(t.init);
