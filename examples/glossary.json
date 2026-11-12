@@ -1,0 +1,24 @@
+{
+"luccet": "2.0.0",
+"format": 1,
+"notes": [
+ {"url":"baking.html","title":"Baking day"},
+ {"url":"fermentation.html","title":"Bulk fermentation and the proof"},
+ {"url":"glossary.html","title":"Glossary"},
+ {"url":"hydration.html","title":"Hydration and baker's percentages"},
+ {"url":"index.html","title":"Bread notes"},
+ {"url":"starter.html","title":"Keeping a starter"}
+],
+"terms": [
+ {"term":"autolyse","key":"autolyse","slug":"glossary-autolyse","id":"autolyse","line":52,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"An "},{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"autolyse"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is a rest of the flour and the water alone, before the levain\nand the salt go in."}]}],"url":"hydration.html"},
+ {"term":"Baker's percentage","key":"baker's percentage","slug":"glossary-baker-s-percentage","id":"bakers-percentage","line":19,"how":"definition","definition":[{"type":"paragraph","children":[{"type":"text","value":"An ingredient's weight as a share of the flour's, which counts as 100%: 750 g of water to\n1000 g of flour is 75%."}]}],"url":"hydration.html"},
+ {"term":"bulk fermentation","key":"bulk fermentation","slug":"glossary-bulk-fermentation","id":"bulk","line":19,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"The "},{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"bulk fermentation"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is the dough's first rise, in one piece, from mixing in the\n"},{"type":"textDirective","name":"term","children":[{"type":"link","url":"glossary.html","title":null,"children":[{"type":"text","value":"levain"}]}],"data":{"luccet":{"tag":"span"}}},{"type":"text","value":" to shaping."}]}],"url":"fermentation.html"},
+ {"term":"crumb","key":"crumb","slug":"glossary-crumb","id":"crumb","line":43,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"The inside of the loaf: the bread around its holes."}]}],"url":"baking.html"},
+ {"term":"hydration","key":"hydration","slug":"glossary-hydration","id":"hydration","line":26,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"A dough's "},{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"hydration"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is its water as a baker's percentage of its flour. The "},{"type":"textDirective","name":"term","children":[{"type":"link","url":"glossary.html","title":null,"children":[{"type":"text","value":"levain"}]}],"data":{"luccet":{"tag":"span"}}},{"type":"text","value":"\ncounts too, since it is half flour and half water."}]}],"url":"hydration.html"},
+ {"term":"levain","key":"levain","slug":"glossary-levain","id":"levain","line":37,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"A "},{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"levain"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is a portion of the starter, fed for one bake and used up in it."}]}],"url":"starter.html"},
+ {"term":"Oven spring","key":"oven spring","slug":"glossary-oven-spring","id":"oven-spring","line":30,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"Oven spring"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is the loaf's last rise, in the first minutes of baking, as the gas in it\nexpands and the yeast has a final burst before the heat kills it."}]}],"url":"baking.html"},
+ {"term":"proof","key":"proof","slug":"glossary-proof","id":"proof","line":40,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"Proofing"}],"attributes":{"title":"proof"},"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is the last rise, in the shape the loaf will bake in."}]}],"url":"fermentation.html"},
+ {"term":"Scoring","key":"scoring","slug":"glossary-scoring","id":"scoring","line":22,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"Scoring"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is cutting the top of the loaf just before it goes in, so that it opens where you\nchoose instead of tearing at its weakest point."}]}],"url":"baking.html"},
+ {"term":"starter","key":"starter","slug":"glossary-starter","id":"keeping-a-starter","line":17,"how":"dfn","definition":[{"type":"paragraph","children":[{"type":"text","value":"A "},{"type":"textDirective","name":"dfn","children":[{"type":"text","value":"starter"}],"data":{"luccet":{"tag":"dfn"}}},{"type":"text","value":" is a culture of wild yeast and lactic acid bacteria, kept alive in flour and\nwater."}]}],"url":"starter.html"}
+]
+}

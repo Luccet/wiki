@@ -247,9 +247,28 @@ Its words come from [`window.LUCCET.strings`](https://luccet.dev/docs/api.html#s
 
 `luccet check` and `luccet build` know the three leaves and do nothing with them: the list, the box and the glossary are built when `luccet.js` runs. A `:term`'s link is theirs: it is in the tree, so it is checked and written. The same search over files, with lines, is [`luccet search`](https://luccet.dev/docs/tools.html#search).
 
+## Examples
+
+A small wiki in [`examples/`](examples): bread notes, as someone learning sourdough keeps them.
+
+| Page | What it shows |
+|---|---|
+| [`index.html`](examples/index.html) | the front page: `::search` over the notes, from `search.json`, and `::notes`, the list of them, newest first |
+| [`glossary.html`](examples/glossary.html) | `::glossary`: the terms the notes define, each with its definition and a link to it |
+| [`starter.html`](examples/starter.html) | terms defined by `:dfn[…]`, one inside `:definition[…]` because its paragraph goes on; a `:term[…]` use |
+| [`hydration.html`](examples/hydration.html) | a term defined by a titled `:::definition` block, another by a `:dfn[…]`; uses of the other notes' terms |
+| [`fermentation.html`](examples/fermentation.html) | `:dfn[proofing]{title=proof}`, a term in its canonical form; an inflected use, `:term[score]{title=scoring}` |
+| [`baking.html`](examples/baking.html) | a term defined in a heading, by the paragraph after it; links to the other notes' sections |
+
+They load `../notes.js`, `../search.js` and `../glossary.js`, this repository's copies, so they show the wiki as it is here, and the engine and the [classic theme](https://github.com/Luccet/themes) from cdn.luccet.dev.
+
+- **Serve them over HTTP:** the pages fetch the files beside them, which a `file:` URL does not allow. In a clone, `python3 -m http.server` serves the repository at http://localhost:8000/; open http://localhost:8000/examples/.
+- **The index files,** `notes.json`, `search.json` and `glossary.json`, are committed beside the notes. After changing a note, run `luccet index examples` in the clone to write them again; a new note is indexed once git tracks it. Each note gives its date in `:::meta`, so the files do not depend on the git history.
+- **`npm test` checks them:** `luccet check` reports nothing, the index files are what `luccet index` writes (the version that wrote them aside, so a new engine release alone does not make them stale), and the pages work in Chromium and Firefox.
+
 ## Tests
 
-`npm test` runs the wiki's tests. Each part's are in `test/<part>/`:
+`npm test` runs the wiki's tests. Each part's are in `test/<part>/`, and the examples' in `test/examples/`:
 - `node.js` runs under Node, with the engine's command line;
 - `browser.js` runs in Chromium and Firefox, through [Playwright](https://playwright.dev);
 - `pages/` holds the notes they open.

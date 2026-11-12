@@ -1,0 +1,341 @@
+{
+  "luccet": "2.0.0",
+  "format": 1,
+  "notes": [
+    {
+      "url": "baking.html",
+      "title": "Baking day",
+      "description": "Scoring, steam and oven spring, in a Dutch oven at 250°C; and the crumb.",
+      "date": "2026-10-18",
+      "meta": {
+        "title": "Baking day",
+        "lang": "en",
+        "date": "2026-10-18",
+        "description": "Scoring, steam and oven spring, in a Dutch oven at 250°C; and the crumb."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "baking-day",
+          "text": "Baking day"
+        },
+        {
+          "depth": 2,
+          "id": "scoring",
+          "text": "Scoring"
+        },
+        {
+          "depth": 2,
+          "id": "oven-spring",
+          "text": "Steam and oven spring"
+        },
+        {
+          "depth": 2,
+          "id": "crumb",
+          "text": "The crumb"
+        }
+      ],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 13,
+          "from": "baking-day"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 15,
+          "from": "baking-day"
+        },
+        {
+          "url": "fermentation.html",
+          "fragment": "proof",
+          "line": 17,
+          "from": "baking-day"
+        },
+        {
+          "url": "fermentation.html",
+          "fragment": "proof",
+          "line": 40,
+          "from": "oven-spring"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 48,
+          "from": "crumb"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 49,
+          "from": "crumb"
+        }
+      ]
+    },
+    {
+      "url": "fermentation.html",
+      "title": "Bulk fermentation and the proof",
+      "description": "From mixing to the oven: the folds, the first rise, shaping and a cold proof.",
+      "date": "2026-10-03",
+      "meta": {
+        "title": "Bulk fermentation and the proof",
+        "lang": "en",
+        "date": "2026-10-03",
+        "description": "From mixing to the oven: the folds, the first rise, shaping and a cold proof."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "bulk-fermentation-and-the-proof",
+          "text": "Bulk fermentation and the proof"
+        },
+        {
+          "depth": 2,
+          "id": "bulk",
+          "text": "Bulk fermentation"
+        },
+        {
+          "depth": 2,
+          "id": "shaping",
+          "text": "Shaping"
+        },
+        {
+          "depth": 2,
+          "id": "proof",
+          "text": "The proof"
+        }
+      ],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 13,
+          "from": "bulk-fermentation-and-the-proof"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 15,
+          "from": "bulk-fermentation-and-the-proof"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 20,
+          "from": "bulk"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 29,
+          "from": "bulk"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 44,
+          "from": "proof"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 49,
+          "from": "proof"
+        }
+      ]
+    },
+    {
+      "url": "glossary.html",
+      "title": "Glossary",
+      "description": "The terms the bread notes define, each with its definition and a link to it.",
+      "date": "2026-09-12",
+      "meta": {
+        "title": "Glossary",
+        "lang": "en",
+        "date": "2026-09-12",
+        "description": "The terms the bread notes define, each with its definition and a link to it."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "glossary",
+          "text": "Glossary"
+        }
+      ],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 13,
+          "from": "glossary"
+        }
+      ]
+    },
+    {
+      "url": "hydration.html",
+      "title": "Hydration and baker's percentages",
+      "description": "Writing a recipe against its flour, and what more water does to a dough.",
+      "date": "2026-09-21",
+      "meta": {
+        "title": "Hydration and baker's percentages",
+        "lang": "en",
+        "date": "2026-09-21",
+        "description": "Writing a recipe against its flour, and what more water does to a dough."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "hydration-and-baker-s-percentages",
+          "text": "Hydration and baker's percentages"
+        },
+        {
+          "depth": 2,
+          "id": "hydration",
+          "text": "Hydration"
+        },
+        {
+          "depth": 2,
+          "id": "formula",
+          "text": "My everyday loaf"
+        },
+        {
+          "depth": 2,
+          "id": "autolyse",
+          "text": "Autolyse"
+        }
+      ],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 13,
+          "from": "hydration-and-baker-s-percentages"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 15,
+          "from": "hydration-and-baker-s-percentages"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 26,
+          "from": "hydration"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 29,
+          "from": "hydration"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 55,
+          "from": "autolyse"
+        }
+      ]
+    },
+    {
+      "url": "index.html",
+      "title": "Bread notes",
+      "description": "What I have learned baking sourdough at home, a note for each stage.",
+      "date": "2026-09-12",
+      "meta": {
+        "title": "Bread notes",
+        "lang": "en",
+        "date": "2026-09-12",
+        "description": "What I have learned baking sourdough at home, a note for each stage."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "bread-notes",
+          "text": "Bread notes"
+        },
+        {
+          "depth": 2,
+          "id": "the-notes",
+          "text": "The notes"
+        }
+      ],
+      "links": [
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 16,
+          "from": "bread-notes"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 22,
+          "from": "bread-notes"
+        }
+      ]
+    },
+    {
+      "url": "starter.html",
+      "title": "Keeping a starter",
+      "description": "Feeding the starter, and building a levain from it the night before a bake.",
+      "date": "2026-09-14",
+      "meta": {
+        "title": "Keeping a starter",
+        "lang": "en",
+        "date": "2026-09-14",
+        "description": "Feeding the starter, and building a levain from it the night before a bake."
+      },
+      "headings": [
+        {
+          "depth": 1,
+          "id": "keeping-a-starter",
+          "text": "Keeping a starter"
+        },
+        {
+          "depth": 2,
+          "id": "feeding",
+          "text": "Feeding"
+        },
+        {
+          "depth": 2,
+          "id": "levain",
+          "text": "The levain"
+        },
+        {
+          "depth": 2,
+          "id": "sluggish",
+          "text": "When it is sluggish"
+        }
+      ],
+      "links": [
+        {
+          "url": "index.html",
+          "fragment": null,
+          "line": 13,
+          "from": "keeping-a-starter"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 15,
+          "from": "keeping-a-starter"
+        },
+        {
+          "url": "glossary.html",
+          "fragment": null,
+          "line": 28,
+          "from": "feeding"
+        },
+        {
+          "url": "hydration.html",
+          "fragment": "formula",
+          "line": 39,
+          "from": "levain"
+        }
+      ]
+    }
+  ]
+}

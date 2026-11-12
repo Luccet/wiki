@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "test": "npm run test:node && npm run test:browser",
-    "test:node": "node test/notes/node.js && node test/search/node.js && node test/glossary/node.js",
-    "test:browser": "node test/notes/browser.js && node test/search/browser.js && node test/glossary/browser.js"
+    "test:node": "node test/notes/node.js && node test/search/node.js && node test/glossary/node.js && node test/examples/node.js",
+    "test:browser": "node test/notes/browser.js && node test/search/browser.js && node test/glossary/browser.js && node test/examples/browser.js"
   },
   "devDependencies": {
     "playwright": "1.61.1"
