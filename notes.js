@@ -37,7 +37,7 @@
       '.t-notes-list > li { padding: .55rem 0; border-block-start: 1px solid var(--t-line); }',
       '.t-notes-title { font-weight: 600; text-decoration: none; }',
       '.t-notes-title:hover { text-decoration: underline; }',
-      '.t-notes-date { color: var(--t-muted); font-size: .85em; margin-inline-start: .5em; font-family: var(--t-sans); }',
+      '.t-notes-date { color: var(--t-muted); font-size: .85em; margin-inline-start: .5em; font-family: var(--t-sans); white-space: nowrap; }',
       '.luccet .t-notes-desc { margin: .2rem 0 0; font-size: .9em; }',
       '.t-notes-status { color: var(--t-muted); font-size: .85em; }',
     ].join('\n'),
