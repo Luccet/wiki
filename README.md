@@ -45,12 +45,12 @@ https://cdn.luccet.dev/wiki/v1/notes.js
 - **From cdn.luccet.dev,** `https://cdn.luccet.dev/wiki/v1/` followed by `notes.js`, `search.js` or `glossary.js`. `v1/` is the newest 1.x release of the wiki, checked for a newer one every hour; a release's own folder, such as `v1.0.0/`, never changes, and browsers keep it a year.
 - **A copy of your own:** put the files beside your notes and list them by their paths, `data-use="notes.js search.js"`.
   - `luccet check` and `luccet build` run a copy of your own, so they know `::notes`, `::search`, `::glossary` and `:term`.
-  - They do not load one from a URL ([`addon.remote`](https://luccet.dev/docs/schema.html#addon-failed)), so to them those are names with no schema.
+  - They do not load one from a URL ([`addon.remote`](https://luccet.dev/docs/addon-api.html#addon-failed)), so to them those are names with no schema.
   - For the glossary that matters: with it from the CDN, a missing glossary page is not reported, and a page `luccet build` writes has no link for a use. Use a copy of `glossary.js` with the command line.
 - **The files it reads:** run `luccet index` in the folder of the notes; it writes `notes.json`, `search.json` and `glossary.json` there ([what is written](https://luccet.dev/docs/tools.html#index-files)).
 - **The pages need to be served over HTTP:** browsers refuse the fetches from a `file:` URL.
 
-How add-ons load, and how to write one: [Add-ons](https://luccet.dev/docs/schema.html#addons).
+How add-ons load, and how to write one: [Writing an add-on](https://luccet.dev/docs/addon-api.html#top).
 
 ## Notes
 
@@ -191,9 +191,11 @@ and on the glossary page, `glossary.html` beside the notes:
 A term is defined where the word is explained ([`luccet.glossary`](https://luccet.dev/docs/api.html#glossary)):
 
 - **`:dfn[truism]`** in the sentence that explains it, HTML's element for the defining instance of a word; its paragraph is the definition.
+  - `:definition[…]` around the sentence ends the definition there, when the paragraph goes on to say more: `:definition[A :dfn[truism] is a claim too obvious to state.] Proverbs are full of them.`
   - `title=` gives the canonical form when the text is not it (`:dfn[truisms]{title=truism}`), as HTML's rule says.
   - A `dfn` in a heading is defined by the paragraph after it.
 - **A titled `:::definition` block,** `:::definition[Kernel]`, defines its title by its body, as math notes do.
+  - When it marks its terms with `:dfn[…]`, they say what it defines: `:::definition[Kernel and image]` around `:dfn[kernel]` and `:dfn[image]` defines those two, and its title is a label. The title is a term too only when a `dfn` names it, as `The :dfn[kernel] of T` does inside `:::definition[Kernel]`.
 - **The same word defined in two notes** is listed twice, and `luccet index` says so.
 
 ### The leaf
